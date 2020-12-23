@@ -1,0 +1,340 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    font-family: 'Proxima Nova';
+    background-color: rgba(255, 255, 255, .5);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('../icons/Homepage2.png');
+}
+
+@mixin container {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+@mixin before {
+    position: absolute;
+    margin: auto;
+    content: '';
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat
+}
+
+.container {
+    @include container;
+}
+
+.header {
+    border-top: 4px solid #7569DE;
+    .header_top {
+        background-color: #fff;
+        &__inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .left {
+                display: flex;
+                align-items: center;
+
+                a {
+                    padding-right: 23px;
+                }
+
+                span {
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 22px;
+                    line-height: 110.84%;
+                    color: #5D748A;
+                }
+            }
+
+            .betwen {
+                ul {
+                    display: flex;
+                    align-items: center;
+
+                    li {
+                        a {
+                            padding: 32px 16px;
+                            font-style: normal;
+                            font-weight: 500;
+                            font-size: 17px;
+                            line-height: 20px;
+                            color: #5D748A;
+                        }
+                    }
+                }
+            }
+
+            .right {
+                ul {
+                    display: flex;
+
+                    li {
+                        .right1 {
+                            font-style: normal;
+                            font-weight: 500;
+                            font-size: 14px;
+                            line-height: 17px;
+                            color: #5D748A;
+                            padding-right: 20px;
+                            position: relative;
+
+                            &::before {
+                                @include before;
+                                left: -20px;
+                                top: 1px;
+                                width: 15px;
+                                height: 16px;
+                                background-image: url('../icons/notif-head.png');
+                            }
+                        }
+
+                        .right2 {
+                            padding: 8px 16px 8px 46px;
+                            border-radius: 24px;
+                            border: 1px solid #FEA244;
+                            font-style: normal;
+                            font-weight: 500;
+                            font-size: 17px;
+                            line-height: 20px;
+                            color: #5D748A;
+                            position: relative;
+
+                            &::before {
+                                content: '';
+                                position: absolute;
+                                background-image: url('../icons/admin-head.png');
+                                width: 20px;
+                                height: 20px;
+                                left: 12px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .header_bottom{
+        &__inner{
+            display: flex;
+            .left{
+
+                h1{
+                padding-top: 293px;
+                padding-left: 100px;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 42px;
+                line-height: 125.34%;
+                color: #5D748A;
+            }
+            .btns{
+                padding-left: 100px;
+                padding-top: 64px;
+                padding-bottom: 277px;
+                .first{
+                    padding: 13px 24px;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 17px;
+                    line-height: 20px;
+                    color: #FFFFFF;
+                    background: linear-gradient(166.82deg, #FEA244 -0.4%, #FD9147 61.84%);
+                    box-shadow: 0px 4px 22px rgba(253, 145, 71, 0.4);
+                    border-radius: 50px;
+                }
+                .second{
+                    padding: 13px 47px;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 17px;
+                    line-height: 20px;
+                    color: #4A4952;
+                    border-radius: 50px;
+                    border: 1px solid #FEA244;
+                }
+            }
+        }
+        .right{
+            background-image: url('../images/kotta-rasm.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 500px;
+            height: 550px;
+            margin-top: 100px;
+        }
+    }
+    }
+
+    .circle{
+        display: flex;
+        justify-content: center;
+        padding-bottom: 164px;
+        .dot1{
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #FD9147;
+            display: block;
+            margin-right: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+            &:hover{
+                width: 140px;
+                border-radius: 6px;
+            }
+        }
+        .dot2{
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #FD9147;
+            display: block;
+            margin-right: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+            &:hover{
+                width: 140px;
+                border-radius: 6px;
+            }
+        }
+        .dot3{
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #FD9147;
+            display: block;
+            margin-right: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+            &:hover{
+                width: 140px;
+                border-radius: 6px;
+            }
+        }
+        .dot4{
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #FD9147;
+            display: block;
+            cursor: pointer;
+            transition: 0.3s;
+            &:hover{
+                width: 140px;
+                border-radius: 6px;
+            }
+        }
+    }
+}
+.main{
+    .main_inner{
+        &__SectionOne{
+            background-image: url('../images/sectinoneback.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: #5D748A;
+            padding: 40px 0 43px 111px;
+            background-position: center;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 16px;
+            margin-bottom: 64px;
+            h3{
+                font-style: normal;
+                font-weight: bold;
+                font-size: 32px;
+                line-height: 162.5%;
+                letter-spacing: 0.12px;
+                color: #FFFFFF;
+                padding-bottom: 8px;
+            }
+            p{
+                font-style: normal;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 162.5%;
+                letter-spacing: 0.12px;
+                color: #FFFFFF;
+                padding-bottom: 36px;
+            }
+            a{
+                display: inline-block;
+                padding: 13px 24px;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 17px;
+                line-height: 20px;
+                color: #FFFFFF;
+                background: linear-gradient(166.82deg, #FEA244 -0.4%, #FD9147 61.84%);
+                box-shadow: 0px 4px 22px rgba(253, 145, 71, 0.4);
+                border-radius: 50px;
+            }
+        }
+        &__SectionTwo{
+            .top{
+                display: flex;
+                .item1{
+                    padding: 20px;
+                    margin-right: 32px;
+                    border-radius: 16px;
+                    span{
+                        display: inline-block;
+                        padding-bottom: 114px;
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 15px;
+                        line-height: 18px;
+                        color: #FFFFFF;
+
+                        &.data{
+                            padding-right:  155px;
+                        }
+                        &.datas{
+                            padding-right:  99px;
+                        }
+                    }
+                    p{
+                        font-style: normal;
+                        font-weight: bold;
+                        font-size: 18px;
+                        line-height: 22px;
+                        letter-spacing: 0.12px;
+
+                        color: #FFFFFF;
+                    }
+                    &.fir{
+                        background: linear-gradient(0deg, #383C45 0%, rgba(56, 60, 69, 0.3) 100%);
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        background-image: url('../images/main-rasm1.png');
+                    }
+                    &.sec{
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        background-image: url('../images/mainrasm2.png');
+                    }                    
+                }
+            }
+            .bottom{
+                display: flex;  
+                min-height: 640px;
+            }
+        }
+    }
+}
